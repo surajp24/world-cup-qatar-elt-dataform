@@ -1,0 +1,14 @@
+steps:
+  - name: hashicorp/terraform:1.10.5
+    script: |
+      terraform init -backend-config="bucket=${TF_STATE_BUCKET}" -backend-config="prefix=${TF_STATE_PREFIX}/world_cup_elt_dataform"
+      terraform plan --out tfplan.out
+      terraform apply -auto-approve tfplan.out
+    dir: 'infra/world_cup_elt_dataform'
+    env:
+      - 'TF_VAR_project_id=$PROJECT_ID'
+      - 'TF_VAR_location=$LOCATION'
+      - 'TF_STATE_BUCKET=$_TF_STATE_BUCKET'
+      - 'TF_STATE_PREFIX=$_TF_STATE_PREFIX'
+      - 'TF_VAR_dataform_repo_name=$_DATAFORM_REPO_NAME'
+      - 'TF_VAR_service_account_email=$_DATAFORM_SA'

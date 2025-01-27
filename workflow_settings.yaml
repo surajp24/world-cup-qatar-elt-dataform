@@ -1,0 +1,5 @@
+defaultProject: gb-poc-373711
+defaultLocation: europe-west1
+defaultDataset: qatar_fifa_world_cup_dataform
+defaultAssertionDataset: qatar_fifa_world_cup_dataform_assertions
+dataformCoreVersion: 3.0.0

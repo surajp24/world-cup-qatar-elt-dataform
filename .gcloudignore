@@ -1,0 +1,10 @@
+.git
+dist
+.idea
+.envrc
+.gitignore
+*.iml
+*.md
+file
+target
+diagram
