@@ -6,6 +6,16 @@ some transformations are applied with the ELT pattern and DBT to apply aggregati
 
 ## Create the Dataform repository with Terraform and synchronize with a GitHub repository
 
+The SSH public host key value must be in the format of a known_hosts file. The value must contain an algorithm and a public key encoded in the base64 format, but without the hostname or IP, in the following format:
+
+The GitHub host public key corresponds to this format.
+
+Retrieve GitHub host public key:
+
+```bash
+ssh-keyscan -t rsa github.com
+```
+
 Plan:
 
 ```bash
