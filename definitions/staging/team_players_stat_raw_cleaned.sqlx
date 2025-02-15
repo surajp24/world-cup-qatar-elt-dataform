@@ -1,5 +1,10 @@
 config {
-    type: "view"
+    type: "view",
+    columns: {
+        goalsScored: "Goal scored for the player.",
+        assistsProvided: "Assists provided by the player.",
+        appearances: "Appearances for the player."
+    }
 }
 
 SELECT
