@@ -36,7 +36,7 @@ statViews.forEach((view) => {
 
 
 statPerCountryTables.forEach((table) => {
-    publish(view.tableName + "_stat",
+    publish(table.tableName + "_stat",
         {
             type: "table"
         })
