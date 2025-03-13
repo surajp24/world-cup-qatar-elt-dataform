@@ -7,7 +7,7 @@ set -u
 echo "############# Create raw table and load data"
 
 bq load \
-  --project_id=gb-poc-373711 \
+  --project_id=anz1103 \
   --location=europe-west1 \
   --source_format=NEWLINE_DELIMITED_JSON \
   --autodetect \
